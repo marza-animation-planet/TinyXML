@@ -1,3 +1,10 @@
 *.o
 *.swp
 xmltest
+
+/.build/
+/release/
+/debug/
+excons.cache
+*.dblite
+
