@@ -24,8 +24,7 @@ def RequireTinyXml(env):
    if use_stl:
       env.Append(CPPDEFINES=["TIXML_USE_STL"])
    env.Append(CPPPATH=[out_incdir])
-   env.Append(LIBPATH=[out_libdir])
-   excons.Link(env, TinyXmlName(), static=True, force=True, silent=True)
+   excons.Link(env, TinyXmlPath(), static=True, force=True, silent=True)
 
 
 prjs = [
