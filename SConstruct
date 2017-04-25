@@ -10,7 +10,10 @@ out_libdir = excons.OutputBaseDirectory() + "/lib"
 use_stl = (excons.GetArgument("tinyxml-use-stl", 1, int) != 0)
 
 def TinyXmlName():
-   return "tinyxml" + excons.GetArgument("tinyxml-suffix", "")
+   name = "tinyxml" + excons.GetArgument("tinyxml-suffix", "")
+   if sys.platform == "win32":
+      name = "lib" + name
+   return name
 
 def TinyXmlPath():
    name = TinyXmlName()
