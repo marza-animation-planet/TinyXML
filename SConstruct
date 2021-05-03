@@ -1,6 +1,8 @@
 import sys
 import glob
 import excons
+import SCons.Script # pylint: disable=import-error
+
 
 env = excons.MakeBaseEnv()
 
@@ -51,5 +53,5 @@ excons.AddHelpOptions(tinyxml="""TINYXML OPTIONS
 excons.DeclareTargets(env, prjs)
 
 
-Export("TinyXmlName TinyXmlPath RequireTinyXml")
+SCons.Script.Export("TinyXmlName TinyXmlPath RequireTinyXml")
 
