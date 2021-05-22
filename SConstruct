@@ -36,7 +36,6 @@ prjs = [
    {  "name": TinyXmlName(),
       "alias": "tinyxml",
       "type": "staticlib",
-      "symvis": "default",
       "defs": (["TIXML_USE_STL"] if use_stl else []),
       "srcs": ["tinystr.cpp",
                "tinyxmlerror.cpp",
